@@ -5,18 +5,22 @@ import com.assignment.autocomplete_api.trie.Trie;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import java.util.List;
+import java.util.Set;
 
 @Service
 public class TrieService {
     private final Trie trie = new Trie();
 
+    /**
+     * Loads all the names present in the Name table into TrieNode data structure.
+     * @param repository
+     */
     @Autowired
     public TrieService(NameRepository repository) {
         repository.findAll().forEach(name -> trie.insert(name.getValue()));
     }
 
-    public List<String> getSuggestions(String prefix) {
+    public Set<String> getSuggestions(String prefix) {
         return trie.autocomplete(prefix);
     }
 }

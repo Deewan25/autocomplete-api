@@ -15,4 +15,12 @@ public class Name {
     public String getValue() {
         return val;
     }
+
+    @Override
+    public String toString() {
+        return "Name{" +
+                "id=" + id +
+                ", val='" + val + '\'' +
+                '}';
+    }
 }
