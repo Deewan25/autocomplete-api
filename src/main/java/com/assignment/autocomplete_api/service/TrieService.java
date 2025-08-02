@@ -12,7 +12,7 @@ public class TrieService {
     private final Trie trie = new Trie();
 
     /**
-     * Loads all the names present in the Name table into TrieNode data structure.
+     * Loads all the names present in the Name table into Trie data structure.
      * @param repository
      */
     @Autowired
