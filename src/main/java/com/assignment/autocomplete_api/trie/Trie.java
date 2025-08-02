@@ -6,7 +6,7 @@ public class Trie {
     private final TrieNode root = new TrieNode();
 
     /**
-     * Inserts the entire word into the TrieNode data structure.
+     * Inserts the entire word into the Trie data structure.
      * And caches each word at character level and stores in the set.
      *
      * Time Complexity: O(L) where L is the length of the word.
@@ -22,7 +22,7 @@ public class Trie {
     }
 
     /**
-     * Returns all the matching prefix's word found in the TrieNode data structure.
+     * Returns all the matching prefix's word found in the Trie data structure.
      *
      * Time Complexity: O(K) where K is the length of the prefix.
      * @param prefix
